@@ -1,0 +1,15 @@
+<div *ngIf="product; else loadingOrError" class="product-detail">
+    <h2>{{ product.title }}</h2>
+    <img [src]="product.image" alt="{{ product.title }}" class="product-image" />
+    <p>{{ product.description }}</p>
+    <p><strong>Category:</strong> {{ product.category }}</p>
+    <p><strong>Price:</strong> ${{ product.price }}</p>
+    <button (click)="addToCart()" class="add-to-cart-button">Add to Cart</button>
+  </div>
+  
+  <ng-template #loadingOrError>
+    <p *ngIf="!errorMessage; else error">Loading product details...</p>
+    <ng-template #error>
+      <p class="error-message">{{ errorMessage }}</p>
+    </ng-template>
+  </ng-template>

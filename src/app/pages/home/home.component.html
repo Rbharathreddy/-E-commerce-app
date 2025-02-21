@@ -1,0 +1,22 @@
+
+<h3>All Categories</h3>
+<div class="categories">
+  <button
+    *ngFor="let category of categories"
+    (click)="onCategoryClick(category)"
+    class="category-button"
+  >
+    {{ category }}
+  </button>
+</div>
+
+<h3>Products</h3>
+<ul class="product-list">
+  <li *ngFor="let product of products" (click)="onProductClick(product.id)">
+    <img [src]="product.image" alt="{{ product.title }}" class="product-image" />
+    <div class="product-details">
+      <h4>{{ product.title }}</h4>
+      <p>${{ product.price }}</p>
+    </div>
+  </li>
+</ul>

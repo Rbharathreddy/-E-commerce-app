@@ -1,0 +1,75 @@
+/* Categories Section */
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between buttons */
+    margin-bottom: 20px;
+  }
+  
+  .category-button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .category-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Products Section */
+  .product-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between products */
+  }
+  
+  .product-list li {
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure image doesn't overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .product-list li:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+  }
+  
+  .product-image {
+    width: 100%; /* Full width */
+    height: 150px; /* Fixed height */
+    object-fit: cover; /* Ensure image covers the area */
+  }
+  
+  .product-details {
+    padding: 10px;
+  }
+  
+  .product-details h4 {
+    margin: 0;
+    font-size: 1rem; /* Title font size */
+    color: #333; /* Dark text */
+  }
+  
+  .product-details p {
+    margin: 5px 0 0;
+    font-size: 0.9rem; /* Price font size */
+    color: #007bff; /* Blue text for price */
+  }
+  h3 {
+    font-size: 1.8rem; /* Larger font size */
+    color: #333; /* Dark gray color */
+    margin: 20px 0; /* Add margin above and below */
+    text-align: left;
+   /* Center-align the heading */
+  
+    letter-spacing: 0.5px; /* Add spacing between letters */
+   
+  }

@@ -1,0 +1,38 @@
+<header>
+  <h1>My E-Commerce App</h1>
+  <nav>
+    <a routerLink="/">Home</a>
+
+    <!-- Search Box -->
+    <div class="search-container">
+      <input
+        type="text"
+        [(ngModel)]="searchTerm"
+        (input)="searchProducts()"
+        placeholder="Search products..."
+        class="search-box"
+      />
+    </div>
+
+    <!-- Cart Link -->
+    <a routerLink="/cart" class="cart-link">
+      <i class="fas fa-shopping-cart"></i> <!-- Cart icon -->
+      <span class="cart-count">{{ cartCount }}</span> <!-- Cart count -->
+    </a>
+    <a routerLink="/profile">Profile</a>
+  </nav>
+</header>
+
+<!-- Flex Row Container for Product List -->
+<div class="flex-row-container">
+  <ul class="product-list">
+    <li *ngFor="let product of filteredProducts" class="product-item">
+      <img [src]="product.image" alt="{{ product.title }}" class="product-image" />
+      <div class="product-details">
+        <h3 class="product-title">{{ product.title }}</h3>
+        <p class="product-price"><strong>Price:</strong> ${{ product.price }}</p>
+        <p class="product-description">{{ product.description }}</p>
+      </div>
+    </li>
+  </ul>
+</div>
